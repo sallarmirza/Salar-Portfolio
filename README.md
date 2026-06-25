@@ -1,83 +1,130 @@
-You never need to touch the components to update content. Just edit this file:
+# Salar Ahmed Mirza
 
-| Field | What it controls |
-|---|---|
-| `name` / `shortName` | Navbar name + Hero heading |
-| `title` | Meta row in Hero |
-| `tagline` | Hero subtext |
-| `about` | About section paragraph |
-| `skills[]` | Skills grid cards |
-| `experience[]` | Experience timeline |
-| `projects[]` | Project cards |
-| `education` | Education card |
-| `socials.github` | Contact section GitHub link |
-| `socials.linkedin` | Contact section LinkedIn link |
+**Full Stack & AI Automation Engineer** — Islamabad, Pakistan
+
+I build scalable web systems and intelligent AI-powered solutions. Currently working at M3Hive on RAG pipelines, LLM integrations, and production chatbot systems.
 
 ---
 
-## Design System
+## 🔗 Links
 
-### The Ghost + Solid Heading Pattern
-Every section uses a dual-layer heading — a large faded ghost text sits behind
-a smaller solid heading. This is the core visual signature of the site.
-Both are controlled via `sections.css`:
-
-```css
-.section-heading-wrap   /* wrapper for both layers */
-.section-ghost          /* large faded background text */
-.section-solid          /* smaller solid foreground heading */
-```
-
-### Adding a New Section
-1. Create `src/components/YourSection.jsx`
-2. Use the standard heading pattern:
-```jsx
-<section id="your-section">
-  <div className="section-heading-wrap">
-    <span className="section-ghost">SECTION</span>
-    <span className="section-solid">Section</span>
-  </div>
-  <div className="section-body">
-    {/* your content */}
-  </div>
-</section>
-```
-3. Import and add it to `App.jsx` with a `<div className="section-divider" />` above it
-4. Add a nav link in `Navbar.jsx`
-
-No new CSS needed — `sections.css` handles it all.
-
-### Dark Mode
-Toggled via the `☽` button in the navbar. Implemented using the `dark` class
-on the root element. All dark variants use Tailwind's `dark:` prefix.
+- 🌐 Portfolio: [salarmirzadev.vercel.app](https://salarmirzadev.vercel.app)
+- 💼 LinkedIn: [linkedin.com/in/salar-ahmed-mirza77](https://www.linkedin.com/in/salar-ahmed-mirza77/)
+- 🐙 GitHub: [github.com/sallarmirza](https://github.com/sallarmirza)
 
 ---
 
-## Socials / Links
+## 🛠 Tech Stack
 
-Add your URLs in `src/data/portfolio.js`:
+**Frontend**
+React.js · Tailwind CSS · Vite
 
-```js
-socials: {
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
-}
-```
+**Backend**
+FastAPI · Python · REST APIs · SQL
 
-The Contact section will render them automatically once filled in.
+**AI & Automation**
+LangGraph · LangChain · ChromaDB · RAG Pipelines · LLM Integration
+
+**Tools**
+Git · Firebase · Docker · Celery · Redis
+
+---
+## 🚀 Featured Projects
+
+### 🤖 AI Lead Generator
+An AI-powered lead generation and qualification platform that automates customer inquiries into actionable leads. Built with multi-agent workflows, intelligent lead scoring, reporting pipelines, and scalable backend services.
+
+**Highlights**
+- Multi-agent workflows using LangGraph
+- Automated lead qualification and reporting
+- Production-ready FastAPI backend
+- Dockerized and scalable architecture
+
+`Python` `FastAPI` `LangGraph` `OpenAI` `PostgreSQL` `Docker`
 
 ---
 
-## Deployment
+### 🩺 Nour Doc
+An AI-powered medical documentation assistant that records doctor-patient conversations, extracts clinically relevant information, and automatically generates structured patient notes while filtering out irrelevant dialogue.
 
-Works with any static host. Recommended:
+**Highlights**
+- Speech-to-text processing pipeline
+- Clinical information extraction
+- Automated SOAP note generation
+- Medical data filtering and summarization
 
-- **Vercel** — connect your GitHub repo, zero config
-- **Netlify** — drag and drop the `dist/` folder after `npm run build`
-- **GitHub Pages** — use the `gh-pages` package
+`Python` `FastAPI` `OpenAI` `RAG` `ChromaDB` `Docker`
 
 ---
 
-## License
+### 📄 AI CV Maker
+A web application that generates professional, ATS-friendly resumes using AI. Users can create, customize, and export tailored CVs based on their experience and target roles.
 
-MIT — free to use and adapt for your own portfolio.
+**Highlights**
+- AI-powered resume generation
+- Multiple professional templates
+- PDF export functionality
+- Structured data generation using LLMs
+
+`React.js` `FastAPI` `OpenAI` `PostgreSQL` `ReportLab`
+
+---
+
+### 🏗️ ScaffSmart ERP
+An Android-based ERP system for scaffolding businesses featuring inventory management, client management, employee management, and YOLOv8-powered inventory counting through computer vision.
+
+**Highlights**
+- Construction inventory management
+- Computer vision-based pipe counting
+- Mobile-first ERP system
+- Real-time inventory tracking
+
+`Kotlin` `Python` `Firebase` `YOLOv8`
+
+---
+
+### 🌍 Smart Weather
+An intelligent weather and air quality prediction application that uses real-time weather data and machine learning models to predict Air Quality Index (AQI).
+
+**Highlights**
+- AQI prediction using XGBoost
+- OpenWeather API integration
+- Location-based forecasting
+- Mobile application with role-based access
+
+`Flutter` `Python` `XGBoost` `TensorFlow`
+
+---
+
+### 😊 Emotion Detection & Well-being App
+A CNN-based emotion detection system trained on 20,000+ images that recommends personalized content for mental well-being based on detected emotions.
+
+**Highlights**
+- Deep learning-based emotion recognition
+- Mobile application integration
+- Content recommendation system
+- Real-time emotion analysis
+
+`Python` `TensorFlow` `OpenCV` `Flutter` `CNN`
+---
+
+## 💼 Experience
+
+**AI Backend Developer — M3Hive** *(Nov 2025 – Present)*
+Building RAG pipelines, LLM integrations, and smart chatbot systems for production environments. Deployed a Visa Lead Chatbot using LangGraph ReAct agent with multi-channel Meta deployment.
+
+**Software Intern — Micro Merger** *(2025)*
+Contributed to software development tasks and gained practical industry experience in a professional team environment.
+
+---
+
+## 🎓 Education
+
+**BS Software Engineering** — CUST, Islamabad *(2021 – 2025)*
+
+---
+
+## 📬 Contact
+
+Open to remote and on-site opportunities.
+Reach me via [LinkedIn](https://www.linkedin.com/in/salar-ahmed-mirza77/) or explore my work on [GitHub](https://github.com/sallarmirza).

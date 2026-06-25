@@ -27,9 +27,7 @@ export default function ProjectModal({ project, onClose }) {
         onClick={onClose}
       />
 
-      {/* ADD no-scrollbar HERE ↓ */}
       <div className="fixed inset-x-4 md:inset-x-10 lg:inset-x-24 top-6 bottom-6 z-50 overflow-y-auto no-scrollbar rounded-[32px] bg-[#111111] dark:bg-[#f4f4f4] border border-white/[0.06] dark:border-black/[0.06] shadow-2xl">
-        {/* Hero */}
         <div className="relative h-64 md:h-80 overflow-hidden">
           {project.image && (
             <img
@@ -58,11 +56,9 @@ export default function ProjectModal({ project, onClose }) {
           </div>
         </div>
 
-        {/* Content */}
         <div className="p-8 md:p-12">
           <div className="grid lg:grid-cols-[1.7fr_1fr] gap-12">
 
-            {/* Left */}
             <div className="space-y-10">
               <div>
                 <h3 className="text-sm uppercase tracking-widest text-[#666] mb-4">Overview</h3>
@@ -85,7 +81,6 @@ export default function ProjectModal({ project, onClose }) {
             </div>
 
 
-            {/* Right */}
             <div className="space-y-8">
               <div className="rounded-3xl border border-white/[0.06] dark:border-black/[0.06] p-6">
                 <h3 className="text-sm uppercase tracking-widest text-[#666] mb-4">Tech Stack</h3>

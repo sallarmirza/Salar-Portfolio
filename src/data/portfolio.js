@@ -236,11 +236,9 @@ export const data = {
       features: [
         "Inventory management",
         "Client management",
-        "Employee management",
         "Construction material tracking",
         "YOLOv8 object detection",
         "Automated pipe counting",
-        "Mobile-first ERP platform"
       ],
 
       result:

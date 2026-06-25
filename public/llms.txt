@@ -1,0 +1,20 @@
+# Salar Ahmed Mirza — AI & Full Stack Engineer
+
+Salar Ahmed Mirza is a Full Stack and AI Automation Engineer based in Islamabad, Pakistan.
+He specialises in React.js, FastAPI, Python, LangGraph, and intelligent system design.
+
+Currently working at M3Hive, building RAG pipelines, LLM integrations, and production chatbot systems.
+
+## Projects
+- ScaffSmart ERP: Android ERP with YOLOv8 object detection for scaffolding businesses
+- Emotion Detection App: CNN-based emotion recognition integrated into a mobile wellness app
+- QuickCart: Modular frontend e-commerce platform
+- Attendance Management System: Full stack web app with admin panel and report generation
+
+## Skills
+React.js, FastAPI, Python, LangGraph, ChromaDB, AI Automation, Machine Learning, Firebase, SQL, REST APIs
+
+## Links
+GitHub: https://github.com/sallarmirza
+LinkedIn: https://www.linkedin.com/in/salar-ahmed-mirza77/
+Portfolio: https://salarmirzadev.vercel.app
