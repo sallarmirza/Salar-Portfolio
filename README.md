@@ -8,7 +8,7 @@ I build scalable web systems and intelligent AI-powered solutions. Currently wor
 
 ## 🔗 Links
 
-- 🌐 Portfolio: [salarmirzadev.vercel.app](https://salarmirzadev.vercel.app)
+- 🌐 Portfolio: [salarmirzadev.vercel.app](https://salar-portfolio-taupe.vercel.app/)
 - 💼 LinkedIn: [linkedin.com/in/salar-ahmed-mirza77](https://www.linkedin.com/in/salar-ahmed-mirza77/)
 - 🐙 GitHub: [github.com/sallarmirza](https://github.com/sallarmirza)
 
