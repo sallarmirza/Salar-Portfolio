@@ -61,10 +61,19 @@ export default function Contact() {
 
             <div>
               <span className="t-label text-[#555555] dark:text-[#999999] block mb-2">
-                {" "}
                 Get In Touch
               </span>
               <div className="flex flex-col gap-3 items-start">
+                {data.socials.email && (
+                  <a
+                    href={`mailto:${data.socials.email}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[13px] font-bold tracking-widest uppercase text-[#f4f4f4] dark:text-[#111111] hover:opacity-60 transition-opacity underline underline-offset-4"
+                  >
+                    sallarmirza77@gmail.com
+                  </a>
+                )}
                 {data.socials.github && (
                   <a
                     href={data.socials.github}
@@ -85,11 +94,13 @@ export default function Contact() {
                     LinkedIn
                   </a>
                 )}
-                {!data.socials.github && !data.socials.linkedin && (
-                  <span className="text-[13px] text-[#666666] italic font-medium">
-                    Links coming soon
-                  </span>
-                )}
+                {!data.socials.email &&
+                  !data.socials.github &&
+                  !data.socials.linkedin && (
+                    <span className="text-[13px] text-[#666666] italic font-medium">
+                      Links coming soon
+                    </span>
+                  )}
               </div>
             </div>
           </div>

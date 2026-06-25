@@ -7,7 +7,6 @@ export default function About() {
       className="min-h-screen flex flex-col justify-center bg-[#111111] dark:bg-[#f4f4f4] px-6 sm:px-12 md:px-16 py-24 transition-colors duration-300"
     >
       <div className="w-full max-w-[1400px] mx-auto">
-
         <div className="relative mb-12 select-none">
           <span className="absolute top-0 left-0 text-[#1a1a1a] dark:text-[#eaeaea] font-black uppercase tracking-tighter block leading-none section-ghost-xl">
             ABOUT
@@ -17,7 +16,7 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="max-w-4xl mt-20 border-l border-white/[0.08] dark:border-black/[0.08] pl-6 md:pl-10">
+        <div className="max-w-4xl mt-16 border-l border-white/[0.08] dark:border-black/[0.08] pl-6 md:pl-10">
           {data.about.map((paragraph, index) => (
             <p
               key={index}
@@ -27,7 +26,6 @@ export default function About() {
             </p>
           ))}
         </div>
-
       </div>
     </section>
   )

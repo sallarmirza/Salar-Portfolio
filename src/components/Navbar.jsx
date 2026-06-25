@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { data } from '../data/portfolio'
 
@@ -16,11 +16,13 @@ export default function Navbar({ dark, setDark }) {
   }
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-12 md:px-16 h-[84px] transition-all duration-500
-      ${isScrolled ? 'bg-[#111111]/40 dark:bg-[#f4f4f4]/40 backdrop-blur-[6px] shadow-[0_1px_30px_rgba(0,0,0,0.03)]' : 'bg-transparent'}`}
-    >
+    <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-12 md:px-16 h-[84px] transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-[#111111]/40 dark:bg-[#f4f4f4]/40 backdrop-blur-[6px] shadow-[0_1px_30px_rgba(0,0,0,0.03)]' 
+        : 'bg-transparent'
+    }`}>
       <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-b from-[#111111]/80 to-transparent dark:from-[#f4f4f4]/80 opacity-40 h-[140px]" />
-
+      
       <button
         onClick={scrollToTop}
         className="text-[15px] font-bold tracking-tight text-[#f4f4f4] dark:text-[#111111] shrink-0 cursor-pointer hover:opacity-70 transition-opacity duration-200"

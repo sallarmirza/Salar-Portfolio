@@ -4,7 +4,7 @@ export default function Experience() {
   return (
     <section id="experience" className="min-h-screen bg-[#111111] dark:bg-[#f4f4f4] px-6 sm:px-12 md:px-16 py-24 transition-colors duration-300">
       <div className="w-full max-w-[1400px] mx-auto">
-
+        
         <div className="relative mb-12 select-none">
           <span className="absolute top-0 left-0 text-[#1a1a1a] dark:text-[#eaeaea] font-black uppercase tracking-tighter block leading-none section-ghost-xl">
             EXPERIENCE
@@ -15,18 +15,17 @@ export default function Experience() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start pt-8 border-t border-white/[0.05] dark:border-black/[0.05]">
-
           <div className="lg:col-span-4 flex flex-col gap-8 lg:sticky lg:top-28">
             <h3 className="t-heading text-[#f4f4f4] dark:text-[#111111]">
               Experience That<br />Builds Trust
             </h3>
-            <div className="w-full max-w-[380px] aspect-[3/4] overflow-hidden rounded-sm relative grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-500 shadow-2xl border border-white/[0.03]">
+            <div className="w-full max-w-[380px] aspect-[3/4] overflow-hidden rounded-sm relative grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-500 shadow-2xl border border-white/[0.03] dark:border-black/[0.03]">
               <img
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
                 alt="Minimalist design environment"
                 className="w-full h-full object-cover transform scale-102 hover:scale-100 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/40 via-transparent to-transparent dark:from-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/40 via-transparent to-transparent dark:from-[#f4f4f4]/10 pointer-events-none" />
             </div>
           </div>
 
@@ -53,8 +52,8 @@ export default function Experience() {
               </div>
             ))}
           </div>
-
         </div>
+
       </div>
     </section>
   )
