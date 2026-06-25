@@ -10,7 +10,7 @@ export default function Hero() {
         
 
         <h1 
-          className="hero-title font-black uppercase text-[#f4f4f4] dark:text-[#111111] select-none ml-7 mt-12 mb-8 w-full text-left whitespace-nowrap"
+          className="hero-title font-black uppercase text-[#f4f4f4] dark:text-[#111111] select-none ml-9 mt-12 mb-8 w-full text-left whitespace-nowrap"
         >
           {data.shortName.join(' ')}
         </h1>
@@ -25,18 +25,17 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Column 2: Origin Context */}
           <div className="flex flex-col md:items-center text-left md:text-center">
             <span>Based in {data.location}</span>
           </div>
 
-          {/* Column 3: Intent Reach */}
+
           <div className="flex flex-col md:items-end text-left md:text-right">
             <span>Working Globally</span>
           </div>
         </div>
 
-        {/* Call to Actions & Availability Frame */}
+
         <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-auto">
           {/* Status Indicator pill */}
           <span className="flex items-center gap-2.5 text-[10px] tracking-widest uppercase font-bold text-[#e0e0e0] dark:text-[#333333] px-4 py-2.5 bg-[#1a1a1a] dark:bg-[#e9e9e9] rounded-sm border border-white/[0.02] shadow-sm">

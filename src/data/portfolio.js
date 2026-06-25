@@ -70,41 +70,83 @@ export const data = {
     },
   ],
 
-  // tags are not yet rendered in Projects.jsx — add them to the component when ready
   projects: [
-    {
-      type: "Android · AI",
-      name: "ScaffSmart ERP",
-      description:
-        "Android-based ERP for scaffolding businesses with inventory, client & employee management, and YOLOv8 object detection for counting scaffolding pipes.",
-      tags: ["Kotlin", "Python", "Firebase", "YOLOv8", "Google Colab"],
-      image: null,
-    },
-    {
-      type: "ML · Mobile",
-      name: "Emotion Detection App",
-      description:
-        "CNN-based emotion detection trained on 20,000+ images, integrated into a mobile app that recommends content for mental well-being.",
-      tags: ["TensorFlow", "OpenCV", "Flutter", "CNN", "Python"],
-      image: null,
-    },
-    {
-      type: "Web · Frontend",
-      name: "QuickCart",
-      description:
-        "Modular frontend e-commerce platform with reusable components, responsive design, and clean UI architecture.",
-      tags: ["HTML5", "Bootstrap", "JavaScript"],
-      image: null,
-    },
-    {
-      type: "Web · Fullstack",
-      name: "Attendance Management System",
-      description:
-        "Web-based attendance system with user & admin panels, attendance tracking, leave management, and report generation.",
-      tags: ["React.js", "Python", "SQL"],
-      image: null,
-    },
-  ],
+  {
+    type: "AI · Automation",
+    name: "AI Lead Generator",
+    description:
+      "An AI-powered lead generation platform that automates user inquires into leads. Features intelligent lead qualification, reporting, and scalable automation pipelines.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "OpenAI",
+      "LangGraph",
+      "PostgreSQL",
+      "Docker"
+    ],
+        image: "/projects/ai-assistant cover photo.png",
+  },
+
+  {
+    type: "AI · Healthcare",
+    name: "Nour Doc",
+    description:
+          "An AI-powered medical documentation assistant that transcribes doctor-patient consultations, extracts clinically relevant information, and automatically generates structured patient notes while filtering out irrelevant conversation.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "OpenAI",
+      "RAG",
+      "Vector Database",
+      "Docker"
+    ],
+    image: 'projects/nourdoc.jpg',
+  },
+
+  {
+    type: "AI · SaaS",
+    name: "AI CV Maker",
+    description:
+      "A web application that generates professional, ATS-friendly resumes using AI. Users can create, customize, and export tailored CVs based on their experience and target roles.",
+    tags: [
+      "React.js",
+      "FastAPI",
+      "OpenAI",
+      "PDF Generation",
+      "PostgreSQL"
+    ],
+        image: "/projects/cv-maker.jpg",
+  },
+
+  {
+    type: "Android · AI",
+    name: "ScaffSmart ERP",
+    description:
+      "ERP system for scaffolding businesses featuring inventory management, client management, and YOLOv8-based inventory counting using computer vision.",
+    tags: [
+      "Kotlin",
+      "Python",
+      "Firebase",
+      "YOLOv8",
+    ],
+    image: '/projects/scaffmart.jpg',
+  },
+
+  {
+    type: "Android · Machine learning",
+    name: "Smart Weather",
+    description:
+      "An AQI predication mobile app with role based access system, It uses OpenWeather API then uses XGBooster with location based data to predict Air Quality Index",
+    tags: [
+      "Python",
+      "TensorFlow",
+      "CNN",
+      "OpenCV",
+      "Flutter"
+    ],
+    image: '/projects/smartweather.jpg',
+  },
+],
 
   education: {
     degree: "BSSE",

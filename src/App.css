@@ -1,3 +1,7 @@
+/* ─── GHOST + SOLID HEADING PATTERN ─────────────────────────────────────────
+   Core visual signature — dual-layer heading used in every section.
+────────────────────────────────────────────────────────────────────────────── */
+
 .section-heading-wrap {
   position: relative;
   height: 110px;
@@ -39,6 +43,8 @@
   color: #f4f4f4;
 }
 
+/* ─── HERO TYPOGRAPHY ────────────────────────────────────────────────────── */
+
 .hero-title {
   font-family: inherit;
   font-size: clamp(32px, 7.8vw, 110px);
@@ -53,11 +59,19 @@
 
 .section-ghost-xl {
   font-size: clamp(80px, 16vw, 180px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  user-select: none;
+  white-space: nowrap;
+  pointer-events: none;
   transform: translateY(-35%);
 }
 
 .section-solid-xl {
   font-size: clamp(44px, 7vw, 90px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
   line-height: 1;
 }
 
@@ -132,4 +146,58 @@
 
 .dark .grid-cell:hover {
   background: #1a1a1a;
+}
+
+/* ─── TYPOGRAPHY TOKENS ──────────────────────────────────────────────────────
+   Single source of truth for all text across the portfolio.
+   Use these classes in components instead of arbitrary text-[] values.
+────────────────────────────────────────────────────────────────────────────── */
+
+/* H2 — "Experience That Builds Trust", section subtitles */
+.t-heading {
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* H3 — company names, project names, card titles */
+.t-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+/* Primary body — about paragraphs, project descriptions */
+.t-body {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+}
+
+/* Secondary body — roles, subtitles, duration text */
+.t-sub {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* Micro labels — "Location", "Availability", "Get In Touch" */
+.t-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Tag badges — project type, skill category */
+.t-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
