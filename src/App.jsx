@@ -13,9 +13,10 @@ const SCROLL_DELAY_MS = 50;
 export default function App() {
   const [dark, setDark] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("portfolio-theme") === "dark";
+      const stored = localStorage.getItem("portfolio-theme");
+      if (stored) return stored === "dark";
     }
-    return false;
+    return true; // default to white theme
   });
 
   const location = useLocation();
