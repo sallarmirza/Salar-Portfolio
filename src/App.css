@@ -66,6 +66,8 @@
   white-space: nowrap;
   pointer-events: none;
   transform: translateY(-35%);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .section-solid-xl {
@@ -87,13 +89,13 @@
 /* ─── SECTION DIVIDER ────────────────────────────────────────────────────── */
 
 .section-divider {
-  height: 0.5px;
-  background: rgba(0, 0, 0, 0.1);
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15);
   margin: 0 2rem;
 }
 
 .dark .section-divider {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* ─── SECTION BODY PADDING ───────────────────────────────────────────────── */
@@ -202,13 +204,15 @@
   text-transform: uppercase;
 }
 
-@keyframes slide-up {
-  from { transform: translateY(100%); opacity: 0; }
-  to   { transform: translateY(0);   opacity: 1; }
-}
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes slide-up {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0);   opacity: 1; }
+  }
 
-.animate-slide-up {
-  animation: slide-up 0.35s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+  .animate-slide-up {
+    animation: slide-up 0.35s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+  }
 }
 
 .no-scrollbar {

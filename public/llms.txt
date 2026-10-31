@@ -1,20 +1,73 @@
-# Salar Ahmed Mirza — AI & Full Stack Engineer
+# Salar Ahmed Mirza — Full Stack & AI Automation Engineer
 
-Salar Ahmed Mirza is a Full Stack and AI Automation Engineer based in Islamabad, Pakistan.
-He specialises in React.js, FastAPI, Python, LangGraph, and intelligent system design.
+> Full Stack and AI Automation Engineer based in Islamabad, Pakistan. Specialises in React.js, FastAPI, Python, LangGraph, and production AI systems. Currently working at M3Hive building RAG pipelines, LLM integrations, and intelligent chatbot systems.
 
-Currently working at M3Hive, building RAG pipelines, LLM integrations, and production chatbot systems.
+## About
+
+Salar Ahmed Mirza is a Software Engineer and AI Automation Engineer from Islamabad, Pakistan. His work spans React.js, FastAPI, Python, and AI orchestration frameworks (LangGraph, OpenAI), with a strong focus on building scalable systems that solve real business problems.
+
+He holds a BSSE (Bachelor of Software Engineering) and is currently working as an AI Backend Developer at M3Hive, where he builds production-grade RAG pipelines and LLM-powered systems.
+
+Salar is open to work — available for remote and on-site opportunities.
+
+## Current Role
+
+- **Company:** M3Hive
+- **Title:** AI Backend Developer
+- **Duration:** November 2025 – Present
+- **Focus:** RAG pipelines, LLM integrations, intelligent chatbot systems
 
 ## Projects
-- ScaffSmart ERP: Android ERP with YOLOv8 object detection for scaffolding businesses
-- Emotion Detection App: CNN-based emotion recognition integrated into a mobile wellness app
-- QuickCart: Modular frontend e-commerce platform
-- Attendance Management System: Full stack web app with admin panel and report generation
+
+- **AI Lead Generator:** An AI-powered lead generation platform that transforms customer inquiries into qualified leads through conversational AI. Built with Python, FastAPI, LangGraph, OpenAI, PostgreSQL, Docker, WhatsApp Cloud API, and Redis. Uses multi-agent LangGraph workflows for lead qualification, context management, and meeting scheduling.
+
+- **Nour Doc:** An AI-powered medical documentation assistant that records doctor-patient conversations, transcribes audio via Whisper, extracts clinically relevant information, and generates structured SOAP patient notes. Built with Python, FastAPI, OpenAI, Whisper, ChromaDB, and Docker.
+
+- **AI CV Maker:** An AI-powered resume builder that generates professional, ATS-friendly resumes based on user experience, skills, and target job roles. Built with React.js, FastAPI, OpenAI API, PostgreSQL, and Python ReportLab for PDF export.
+
+- **ScaffSmart ERP:** An Android ERP system for scaffolding businesses with inventory management, client management, and AI-powered material counting through YOLOv8 computer vision. Built with Kotlin, Python, Firebase, and YOLOv8.
+
+- **Smart Weather:** A machine learning mobile app that predicts Air Quality Index (AQI) using weather data and location-based environmental parameters. Built with Flutter, Python, XGBoost, OpenWeather API, and Firebase.
 
 ## Skills
-React.js, FastAPI, Python, LangGraph, ChromaDB, AI Automation, Machine Learning, Firebase, SQL, REST APIs
 
-## Links
-GitHub: https://github.com/sallarmirza
-LinkedIn: https://www.linkedin.com/in/salar-ahmed-mirza77/
-Portfolio: https://salarmirzadev.vercel.app
+### Frontend
+- React.js, JavaScript (ES6+)
+
+### AI & Backend
+- Python, FastAPI, REST APIs, AI Automation, LangGraph, LLM Integration (OpenAI), RAG Pipelines
+
+### ML & Vision
+- Machine Learning, Computer Vision (YOLOv8, OpenCV)
+
+### Infrastructure & Tools
+- SQL, Docker, AWS, Git & GitHub, Postman
+
+## Education
+
+- **Degree:** BSSE — Bachelor of Software Engineering
+- **Status:** Graduate
+
+## Contact & Links
+
+- **Email:** sallarmirza77@gmail.com
+- **GitHub:** https://github.com/sallarmirza
+- **LinkedIn:** https://www.linkedin.com/in/salar-ahmed-mirza77/
+- **Portfolio:** https://salar-portfolio-taupe.vercel.app/
+
+## Frequently Asked Questions
+
+**Who is Salar Ahmed Mirza?**
+Salar Ahmed Mirza is a Full Stack and AI Automation Engineer from Islamabad, Pakistan, specialising in React.js, FastAPI, Python, LangGraph, and production AI systems.
+
+**What does Salar Ahmed Mirza work on?**
+He builds AI-powered web applications, RAG pipelines, LLM integrations, multi-agent workflows using LangGraph, and scalable backend APIs using FastAPI and Python.
+
+**Where does Salar Ahmed Mirza work?**
+He currently works at M3Hive as an AI Backend Developer, building intelligent systems and chatbot solutions.
+
+**What is Salar Ahmed Mirza's tech stack?**
+React.js, FastAPI, Python, LangGraph, OpenAI API, PostgreSQL, Docker, AWS, ChromaDB, YOLOv8.
+
+**Is Salar Ahmed Mirza available for hire?**
+Yes. He is open to work and available for both remote and on-site opportunities.

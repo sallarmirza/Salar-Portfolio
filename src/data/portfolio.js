@@ -12,6 +12,7 @@ import {
   ScanSearch,
   Send,
   Sparkles,
+  Terminal,
   Zap,
 } from "lucide-react";
 
@@ -30,23 +31,43 @@ export const data = {
   ],
   experienceImage: null,
 
-  skills: [
-    { name: "React.js",         sub: "Frontend Development",      icon: Atom },
-    { name: "JavaScript",       sub: "ES6+ Development",          icon: Code2 },
-    { name: "Python",           sub: "Backend & AI Development",  icon: Code2 },
-    { name: "FastAPI",          sub: "API Development",           icon: Zap },
-    { name: "REST APIs",        sub: "API Design & Integration",  icon: Plug },
-    { name: "AI Automation",    sub: "Agentic Workflows",         icon: Brain },
-    { name: "LangGraph",        sub: "AI Orchestration",          icon: Bot },
-    { name: "Machine Learning", sub: "Model Development",         icon: ChartNoAxesColumn },
-    { name: "LLM Integration",  sub: "OpenAI & AI Systems",       icon: Sparkles },
-    { name: "RAG Pipelines",    sub: "Retrieval Systems",         icon: Bot },
-    { name: "Computer Vision",  sub: "YOLO & OpenCV",             icon: ScanSearch },
-    { name: "SQL",              sub: "Database Management",       icon: Database },
-    { name: "Docker",           sub: "Containerization",          icon: Container },
-    { name: "AWS",              sub: "Cloud Services",            icon: Cloud },
-    { name: "Git & GitHub",     sub: "Version Control",           icon: FolderGit },
-    { name: "Postman",          sub: "API Testing",               icon: Send },
+  skillGroups: [
+    {
+      label: "Frontend",
+      skills: [
+        { name: "React.js",    sub: "Frontend Development", icon: Atom },
+        { name: "JavaScript",  sub: "ES6+ Development",     icon: Code2 },
+      ],
+    },
+    {
+      label: "AI & Backend",
+      skills: [
+        { name: "Python",          sub: "Backend & AI Development",  icon: Terminal },
+        { name: "FastAPI",         sub: "API Development",           icon: Zap },
+        { name: "REST APIs",       sub: "API Design & Integration",  icon: Plug },
+        { name: "AI Automation",   sub: "Agentic Workflows",         icon: Brain },
+        { name: "LangGraph",       sub: "AI Orchestration",          icon: Bot },
+        { name: "LLM Integration", sub: "OpenAI & AI Systems",       icon: Sparkles },
+        { name: "RAG Pipelines",   sub: "Retrieval Systems",         icon: Bot },
+      ],
+    },
+    {
+      label: "ML & Vision",
+      skills: [
+        { name: "Machine Learning", sub: "Model Development", icon: ChartNoAxesColumn },
+        { name: "Computer Vision",  sub: "YOLO & OpenCV",     icon: ScanSearch },
+      ],
+    },
+    {
+      label: "Infra & Tools",
+      skills: [
+        { name: "SQL",          sub: "Database Management", icon: Database },
+        { name: "Docker",       sub: "Containerization",    icon: Container },
+        { name: "AWS",          sub: "Cloud Services",      icon: Cloud },
+        { name: "Git & GitHub", sub: "Version Control",     icon: FolderGit },
+        { name: "Postman",      sub: "API Testing",         icon: Send },
+      ],
+    },
   ],
 
   experience: [
@@ -68,6 +89,7 @@ export const data = {
 
   projects: [
   {
+    gridSpan: "md:col-span-5 md:row-span-2",
     type: "AI · Automation",
     name: "AI Lead Generator",
     description:
@@ -84,7 +106,7 @@ export const data = {
       "Redis"
     ],
 
-    image: "/projects/ai-assistant cover photo.png",
+    image: "/projects/ai-assistant.webp",
 
     extendedDetails: {
       challenge:
@@ -117,6 +139,7 @@ export const data = {
   },
 
   {
+    gridSpan: "md:col-span-7",
     type: "AI · Healthcare",
     name: "Nour Doc",
     description:
@@ -163,6 +186,7 @@ export const data = {
   },
 
   {
+    gridSpan: "md:col-span-4",
     type: "AI · SaaS",
     name: "AI CV Maker",
     description:
@@ -206,6 +230,7 @@ export const data = {
   },
 
   {
+    gridSpan: "md:col-span-3",
     type: "Android · AI",
     name: "ScaffSmart ERP",
     description:
@@ -247,6 +272,7 @@ export const data = {
   },
 
   {
+    gridSpan: "md:col-span-12",
     type: "Android · Machine Learning",
     name: "Smart Weather",
     description:
@@ -260,7 +286,7 @@ export const data = {
       "Firebase"
     ],
 
-    image: "/projects/smartweather.png",
+    image: "/projects/smartweather.jpg",
 
     extendedDetails: {
       challenge:

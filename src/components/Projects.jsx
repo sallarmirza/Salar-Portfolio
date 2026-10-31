@@ -1,27 +1,11 @@
 import { useState } from "react";
+import { motion, useReducedMotion } from 'framer-motion'
 import { data } from "../data/portfolio";
 import ProjectModal from "./ProjectModel";
 
-const getColSpan = (indexInGroup) => {
-  switch (indexInGroup) {
-    case 0: return "md:col-span-5 md:row-span-2";
-    case 1: return "md:col-span-7";
-    case 2: return "md:col-span-4";
-    case 3: return "md:col-span-3";
-    default: return "md:col-span-6";
-  }
-};
-
-const getLineClamp = (indexInGroup) => {
-  switch (indexInGroup) {
-    case 0: return "line-clamp-4";
-    case 1: return "line-clamp-1";
-    default: return "line-clamp-2";
-  }
-};
-
 export default function Projects() {
   const [selected, setSelected] = useState(null);
+  const shouldReduce = useReducedMotion()
 
   return (
     <section
@@ -29,8 +13,8 @@ export default function Projects() {
       className="min-h-screen bg-[#111111] dark:bg-[#f4f4f4] px-6 sm:px-12 md:px-16 py-24 transition-colors duration-300"
     >
       <div className="w-full max-w-[1400px] mx-auto">
-        <div className="relative mb-12 select-none">
-          <span className="absolute top-0 left-0 text-[#1a1a1a] dark:text-[#eaeaea] font-black uppercase tracking-tighter block leading-none section-ghost-xl">
+        <div className="relative mb-12 select-none overflow-hidden">
+          <span aria-hidden="true" className="absolute top-0 left-0 text-[#1a1a1a] dark:text-[#eaeaea] font-black uppercase tracking-tighter block leading-none section-ghost-xl">
             PROJECTS
           </span>
           <h2 className="relative z-10 font-bold text-[#f4f4f4] dark:text-[#111111] tracking-tight uppercase section-solid-xl">
@@ -38,30 +22,45 @@ export default function Projects() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 auto-rows-[280px] gap-4 pt-8 border-t border-white/[0.05] dark:border-black/[0.05]">
+        <motion.div
+          initial={shouldReduce ? false : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
+          className="grid grid-cols-1 md:grid-cols-12 auto-rows-[280px] gap-4 pt-8 border-t border-white/[0.05] dark:border-black/[0.05]"
+        >
           {data.projects.map((p, index) => {
-            const indexInGroup = index % 4;
-            const isLandscape = index === 4;
-            const colSpan = isLandscape ? "md:col-span-12" : getColSpan(indexInGroup);
-            const lineClamp = getLineClamp(indexInGroup);
-            const maxTags = indexInGroup === 0 || indexInGroup === 1 ? 4 : 2;
+            const colSpan = p.gridSpan || "md:col-span-6";
+            const isTall = colSpan.includes("row-span-2");
+            const isFullWidth = colSpan.includes("col-span-12");
+            const isWide = colSpan.includes("col-span-7");
+            const lineClamp = isTall ? "line-clamp-4" : isWide ? "line-clamp-1" : "line-clamp-2";
+            const maxTags = isTall || isWide ? 4 : isFullWidth ? 5 : 2;
 
             return (
-              <div
+              <button
                 key={p.name}
                 onClick={() => setSelected({ ...p, index })}
+                aria-label={`View ${p.name} project`}
                 className={`${colSpan} group relative overflow-hidden rounded-xl
-                  border border-white/[0.05] dark:border-black/[0.05]
-                  flex flex-col justify-end p-6
+                  border border-white/[0.06] dark:border-black/[0.06]
+                  flex flex-col justify-end p-6 text-left
                   bg-[#131313] dark:bg-[#e6e6e6]
-                  transition-all duration-500 hover:border-white/[0.18] dark:hover:border-black/[0.18]
+                  transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
+                  hover:border-white/[0.22] dark:hover:border-black/[0.22]
+                  hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.04)]
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 dark:focus-visible:ring-black/40
                   cursor-pointer`}
               >
                 {p.image && (
                   <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
                     <img
                       src={p.image}
-                      alt={p.name}
+                      alt=""
+                      role="presentation"
+                      loading="lazy"
+                      width="800"
+                      height="560"
                       className="w-full h-full object-cover
                         opacity-25 dark:opacity-20
                         brightness-[0.4] dark:brightness-[0.95]
@@ -75,36 +74,47 @@ export default function Projects() {
                   </div>
                 )}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent dark:from-[#f4f4f4] dark:via-[#f4f4f4]/40 pointer-events-none z-10 transition-opacity duration-500 group-hover:opacity-40 dark:group-hover:opacity-20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent dark:from-[#f4f4f4] dark:via-[#f4f4f4]/40 pointer-events-none z-10 transition-opacity duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:opacity-40 dark:group-hover:opacity-20" />
 
-                <span className="absolute top-5 right-5 t-tag text-[#333] dark:text-[#b5b5b5] z-20 font-mono">
+                <span className="absolute top-5 right-5 t-tag text-[#444] dark:text-[#b5b5b5] z-20">
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
-                {/* View hint on hover */}
-                <span className="absolute top-5 left-5 t-tag text-white/0 dark:text-black/0 group-hover:text-white/50 dark:group-hover:text-black/40 z-20 transition-all duration-300">
+                <span className="absolute top-4 left-4 z-20
+                  t-tag text-transparent
+                  border border-transparent
+                  px-3 py-1.5 rounded-sm
+                  translate-y-1 group-hover:translate-y-0
+                  group-hover:text-white/70 dark:group-hover:text-black/60
+                  group-hover:border-white/25 dark:group-hover:border-black/20
+                  group-hover:bg-black/30 dark:group-hover:bg-white/25
+                  backdrop-blur-sm
+                  transition-all duration-300 ease-out">
                   View Project
                 </span>
 
-                <div className={`relative z-20 flex flex-col gap-2 ${isLandscape ? "max-w-2xl" : ""}`}>
+                <div className={`relative z-20 flex flex-col gap-2 ${isFullWidth ? "max-w-2xl" : ""}`}>
                   <span className="t-tag text-[#555] dark:text-[#888]">
                     {p.type || "DEV"}
                   </span>
                   <h3 className="t-title text-[#f4f4f4] dark:text-[#111111]">
                     {p.name}
                   </h3>
-                  <p className={`t-body text-[#999] dark:text-[#555] ${isLandscape ? "line-clamp-2 max-w-xl" : lineClamp}`}>
+                  <p className={`t-body text-[#999] dark:text-[#555] ${isFullWidth ? "line-clamp-2 max-w-xl" : lineClamp}`}>
                     {p.description}
                   </p>
                   {p.tags && (
                     <div className="flex flex-wrap gap-1.5 mt-2">
-                      {p.tags.slice(0, isLandscape ? 5 : maxTags).map((tag) => (
+                      {p.tags.slice(0, maxTags).map((tag) => (
                         <span
                           key={tag}
                           className="text-[11px] px-2 py-0.5 rounded backdrop-blur-md
-                            bg-white/[0.02] dark:bg-black/[0.02]
-                            border border-white/10 dark:border-black/10
-                            text-[#888] dark:text-[#666]"
+                            bg-white/[0.06] dark:bg-black/[0.05]
+                            border border-white/[0.12] dark:border-black/[0.12]
+                            text-[#999] dark:text-[#666]
+                            group-hover:bg-black/40 group-hover:border-white/[0.15] group-hover:text-white/70
+                            dark:group-hover:bg-white/40 dark:group-hover:border-black/[0.15] dark:group-hover:text-black/70
+                            transition-all duration-500"
                         >
                           {tag}
                         </span>
@@ -112,10 +122,10 @@ export default function Projects() {
                     </div>
                   )}
                 </div>
-              </div>
+              </button>
             );
           })}
-        </div>
+        </motion.div>
       </div>
 
       {/* Modal */}
